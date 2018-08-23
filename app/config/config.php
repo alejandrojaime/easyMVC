@@ -24,8 +24,8 @@ defined('DATABASE') or define('DATABASE', array(
   'db_host' => 'localhost',
   'db_port' => '3306',
   'db_user' => 'root',
-  'db_pass' => 'accesocero',
-  'db_name' => 'CanalTour',
+  'db_pass' => 'root',
+  'db_name' => 'ROOT',
   'db_charset' => 'UTF-8'
 ));
 
