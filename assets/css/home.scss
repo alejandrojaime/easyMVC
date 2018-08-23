@@ -1,0 +1,145 @@
+@import 'color.scss';
+
+div.works,
+div.education,
+div.competences{
+  display:block;
+
+  div.table{
+    position:relative;
+    width:100%;
+    height:auto;
+    display:table;
+    margin: 0 auto;
+    padding:0;
+
+    div.tr{
+      display:table-row;
+
+      div.td{
+        display:table-cell;
+        padding:3px 0;
+        box-sizing:border-box;
+        .parrafo{
+          max-width:600px;
+          line-height:20px;
+        }
+      }
+      div.td:first-of-type{
+        font-weight:bold;
+        text-align:right;
+        padding-right:5px;
+        border-right:1px solid #666;
+        width:150px;
+      }
+      div.td + div.td{
+        padding-left:10px;
+      }
+    }
+    div.tr:nth-child(4n) > div.td:last-of-type{
+      padding-bottom:50px;
+    }
+    div.tr:last-of-type > div.td:last-of-type{
+      padding-bottom:0px;
+    }
+  }
+
+  div.table + .table{
+    margin-top:20px;
+  }
+}
+
+div.additionalInfo{
+  ul{
+    padding:0;
+    list-style:none;
+    li+li{
+      padding-top:10px;
+    }
+  }
+}
+
+div.computer_skills{
+  ul{
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    list-style:none;
+    padding:0;
+
+    li{
+      span{
+        display:block;
+        margin-bottom:3px;
+      }
+      div.progress {
+        width: 90%;
+        display: block;
+        border: 1px solid;
+        margin-bottom:10px;
+        div.completed{
+          height: 100%;
+          display: block;
+          @include linear-gradient(#64AFC0, #35D8B3);
+          small {
+            color: #FFF;
+            vertical-align: middle;
+            padding: 5px;
+            line-height: 19px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+section{
+  margin-top:15px;
+  padding:0 15px;
+}
+
+.titular + section{
+  margin-bottom:50px;
+}
+
+
+@media (max-width: 600px) {
+  div.works,
+  div.education,
+  div.competences{
+    display:block;
+
+    div.table{
+
+      div.tr{
+        div.td{
+          display:block;
+        }
+        div.td:first-of-type{
+          text-align:left;
+          border:none;
+          padding-right:0;
+        }
+        div.td:last-of-type{
+          padding-bottom:10px;
+        }
+      }
+    }
+    div.table + .table{
+      margin-top:35px;
+    }
+  }
+  div.computer_skills{
+    ul{
+      -webkit-columns: 1;
+      -moz-columns: 1;
+      columns: 1;
+      li{
+        div.progress{
+          width:100%;
+        }
+      }
+    }
+  }
+}

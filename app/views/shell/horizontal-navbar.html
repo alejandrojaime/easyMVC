@@ -1,0 +1,19 @@
+<div class="desktop-only">
+  <div class="horizontal-navBar">
+  	<nav>
+  		<ul>
+  			<li><a {% if controller in ['Home','Inicio'] %} class="active" {% endif %} href="{{section_routing[lang]['Home']['url']}}"><span>{{section_routing[lang]['Home']['name']}}</span></a></li>
+  			<li><a {% if controller in ['Contact','Contacto'] %} class="active" {% endif %} href="{{section_routing[lang]['Contact']['url']}}"><span>{{section_routing[lang]['Contact']['name']}}</span></a></li>
+        <li>
+          {% if controller in ['Home','Inicio'] %}
+            <a href="{{section_routing[language.home.header.other_languages.short]['Home']['url']}}"><span><i class="material-icons">keyboard_arrow_right
+</i>{{language.home.header.other_languages.name}}</span></a>
+          {% elseif controller in ['Contact','Contacto'] %}
+            <a href="{{section_routing[language.home.header.other_languages.short]['Contact']['url']}}"><span><i class="material-icons">keyboard_arrow_right
+</i>{{language.home.header.other_languages.name}}</span></a>
+          {% endif %}
+        </li>
+  		</ul>
+  	</nav>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+{% include 'shell/header.html' %}
+	{% if works %}
+	<h1 class="titular">{{language.home.work_experience}}</h1>
+	<section>
+		<div class="works">
+
+				{% for work in works %}
+				<div class="table">
+						<div class="tr">
+							<div class="td">{{language.home.dates}}</div>
+							<div class="td">{{ work.start_date|raw('html') }} - {% if work.current == 1 %}{{language.home.current}}{% else %} {{ work.end_date }} {% endif %}</div>
+						</div>
+						<div class="tr">
+							<div class="td">{{language.home.company}}</div>
+							<div class="td">{{ work.company|raw('html') }}</div>
+						</div>
+						<div class="tr">
+							<div class="td">{{language.home.worked_as}}</div>
+							<div class="td">{{ work.position|raw('html') }}</div>
+						</div>
+						<div class="tr">
+							<div class="td">{{language.home.responsibilities}}</div>
+							<div class="td"><div class="parrafo">{{ work.work_performed|raw('html') }}</div></div>
+						</div>
+				</div>
+		    {% endfor %}
+
+		</div>
+	</section>
+	{%endif%}
+
+	{% if additionalInfo %}
+	<h2 class="titular">{{language.home.additional_information}}</h2>
+	<section>
+		<div class="additionalInfo">
+			<ul>
+				{% for info in additionalInfo %}
+				<li>{{ info.description }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+	{% endif %}
+
+	{% if skills %}
+	<h3 class="titular">{{language.home.tools_and_technologies}}</h3>
+	<section>
+		<div class="computer_skills">
+			<ul>
+				{% for skill in skills %}
+				<li>
+						<div class="skill">
+							<span>{{ skill.description }}</span>
+							<div class="progress">
+								<div class="completed" style="width:{{ skill.level }}%;"><small>{{ skill.level }}%</small></div>
+							</div>
+						</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+	{% endif %}
+
+	{% if education %}
+	<h3 class="titular">{{language.home.education_and_formation}}</h3>
+	<section>
+		<div class="education">
+			{% for study in education %}
+			<div class="table">
+					<div class="tr">
+						<div class="td">{{language.home.dates}}</div>
+						<div class="td">{{ study.start_date|raw('html') }} - {% if study.current == 1 %}{{language.home.current}}{% else %} {{ study.end_date }} {% endif %}</div>
+					</div>
+					<div class="tr">
+						<div class="td">{{language.home.title}}</div>
+						<div class="td"><div class="parrafo">{{ study.title|raw('html') }}</div></div>
+					</div>
+					<div class="tr">
+						<div class="td">{{language.home.institution}}</div>
+						<div class="td">{{ study.institution|raw('html') }}</div>
+					</div>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+	{% endif %}
+
+	{% if competences %}
+	<h3 class="titular">{{language.home.skills_and_competences}}</h3>
+	<section>
+		<div class="competences">
+			{% for competence in competences %}
+			<div class="table">
+					<div class="tr">
+						<div class="td">{{language.home.mother_tongue}}</div>
+						<div class="td">{{ competence.mother_tongue|raw('html') }}</div>
+					</div>
+					<div class="tr">
+						<div class="td">{{language.home.other_languages}}</div>
+						<div class="td">{{ competence.other_languages|raw('html') }}</div>
+					</div>
+					<div class="tr">
+						<div class="td">{{language.home.about_me}}</div>
+						<div class="td"><div class="parrafo">{{ competence.about_me|raw('html') }}</div></div>
+					</div>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+	{% endif %}
+
+{% include 'shell/footer.html' %}

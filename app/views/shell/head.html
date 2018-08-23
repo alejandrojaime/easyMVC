@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#484EB4">
+	<title>{{language.home.header.title}}</title>
+	<meta name="title" content="{{head.title}}">
+	<meta name="description" content="{{head.description}}">
+	<meta itemprop="url" content="{{BASEURL}}">
+	<link href="{{BASEURL}}/assets/fonts/raleway.css" rel="stylesheet" type="text/css">
+	<link href="{{BASEURL}}/assets/material-icons/material-icons.css" rel="stylesheet" type="text/css">
+	{% for item in styles %}
+	<link href="{{BASEURL}}/assets/css/{{item}}" rel="stylesheet" type="text/css">
+	{% endfor %}
+</head>

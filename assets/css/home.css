@@ -1,0 +1,120 @@
+div.works, div.education, div.competences {
+  display: block;
+}
+div.works div.table, div.education div.table, div.competences div.table {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+}
+div.works div.table div.tr, div.education div.table div.tr, div.competences div.table div.tr {
+  display: table-row;
+}
+div.works div.table div.tr div.td, div.education div.table div.tr div.td, div.competences div.table div.tr div.td {
+  display: table-cell;
+  padding: 3px 0;
+  box-sizing: border-box;
+}
+div.works div.table div.tr div.td .parrafo, div.education div.table div.tr div.td .parrafo, div.competences div.table div.tr div.td .parrafo {
+  max-width: 600px;
+  line-height: 20px;
+}
+div.works div.table div.tr div.td:first-of-type, div.education div.table div.tr div.td:first-of-type, div.competences div.table div.tr div.td:first-of-type {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 5px;
+  border-right: 1px solid #666;
+  width: 150px;
+}
+div.works div.table div.tr div.td+div.td, div.education div.table div.tr div.td+div.td, div.competences div.table div.tr div.td+div.td {
+  padding-left: 10px;
+}
+div.works div.table div.tr:nth-child(4n)>div.td:last-of-type, div.education div.table div.tr:nth-child(4n)>div.td:last-of-type, div.competences div.table div.tr:nth-child(4n)>div.td:last-of-type {
+  padding-bottom: 50px;
+}
+div.works div.table div.tr:last-of-type>div.td:last-of-type, div.education div.table div.tr:last-of-type>div.td:last-of-type, div.competences div.table div.tr:last-of-type>div.td:last-of-type {
+  padding-bottom: 0px;
+}
+div.works div.table+.table, div.education div.table+.table, div.competences div.table+.table {
+  margin-top: 20px;
+}
+div.additionalInfo ul {
+  padding: 0;
+  list-style: none;
+}
+div.additionalInfo ul li+li {
+  padding-top: 10px;
+}
+div.computer_skills ul {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  list-style: none;
+  padding: 0;
+}
+div.computer_skills ul li span {
+  display: block;
+  margin-bottom: 3px;
+}
+div.computer_skills ul li div.progress {
+  width: 90%;
+  display: block;
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+div.computer_skills ul li div.progress div.completed {
+  height: 100%;
+  display: block;
+  background: #35D8B3;
+  background: -moz-linear-gradient(45deg, #64AFC0 0, #35D8B3 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0, #64AFC0), color-stop(100%, #35D8B3));
+  background: -webkit-linear-gradient(45deg, #64AFC0 0, #35D8B3 100%);
+  background: -o-linear-gradient(45deg, #64AFC0 0, #35D8B3 100%);
+  background: -ms-linear-gradient(45deg, #64AFC0 0, #35D8B3 100%);
+  background: linear-gradient(45deg, #64AFC0 0, #35D8B3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#64AFC0, endColorstr=#35D8B3);
+}
+div.computer_skills ul li div.progress div.completed small {
+  color: #FFF;
+  vertical-align: middle;
+  padding: 5px;
+  line-height: 19px;
+  font-size: 10px;
+}
+section {
+  margin-top: 15px;
+  padding: 0 15px;
+}
+.titular+section {
+  margin-bottom: 50px;
+}
+@media (max-width: 600px) {
+  div.works, div.education, div.competences {
+    display: block;
+  }
+  div.works div.table div.tr div.td, div.education div.table div.tr div.td, div.competences div.table div.tr div.td {
+    display: block;
+  }
+  div.works div.table div.tr div.td:first-of-type, div.education div.table div.tr div.td:first-of-type, div.competences div.table div.tr div.td:first-of-type {
+    text-align: left;
+    border: none;
+    padding-right: 0;
+  }
+  div.works div.table div.tr div.td:last-of-type, div.education div.table div.tr div.td:last-of-type, div.competences div.table div.tr div.td:last-of-type {
+    padding-bottom: 10px;
+  }
+  div.works div.table+.table, div.education div.table+.table, div.competences div.table+.table {
+    margin-top: 35px;
+  }
+  div.computer_skills ul {
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
+  div.computer_skills ul li div.progress {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=home.css.map */

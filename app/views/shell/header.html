@@ -1,0 +1,18 @@
+{% include 'shell/head.html' %}
+<body>
+	{% include 'shell/vertical-navbar.html' %}
+	<div class="main-container">
+		<header>
+			<div class="header-content">
+				<div class="mobile-only">
+					<div class="hamburger hamburger--elastic">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</div>
+				</div>
+				{% include 'shell/horizontal-navbar.html' %}
+				<h1><a href="{{section_routing[lang]['Home']['url']}}">{{language.home.header.section_title}}</a></h1>
+			</div>
+		</header>
+		<div class="content">

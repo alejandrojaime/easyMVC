@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('files/hinted-Raleway-Medium.eot');
+	src: local('Raleway Medium'), local('Raleway-Medium'),
+		url('files/hinted-Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+		url('files/hinted-Raleway-Medium.woff2') format('woff2'),
+		url('files/hinted-Raleway-Medium.woff') format('woff'),
+		url('files/hinted-Raleway-Medium.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('files/hinted-Raleway-Bold.eot');
+	src: local('Raleway Bold'), local('Raleway-Bold'),
+		url('files/hinted-Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+		url('files/hinted-Raleway-Bold.woff2') format('woff2'),
+		url('files/hinted-Raleway-Bold.woff') format('woff'),
+		url('files/hinted-Raleway-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
