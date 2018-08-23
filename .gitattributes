@@ -1,5 +1,1 @@
-* linguist-vendored
-*.js linguist-vendored=false
-*.css linguist-vendored=false
-*.html linguist-vendored=false
-*.php linguist-language=PHP
+assets/* linguist-vendored
